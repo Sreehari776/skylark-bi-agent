@@ -68,7 +68,6 @@ def parse_query(question):
     Map natural-language business questions to structured intents and date range bounds.
     """
     raw_text = question or ""
-    # Normalize punctuation/apostrophes/whitespace
     text = raw_text.lower().strip()
     text_clean = re.sub(r"[^\w\s]", " ", text)
     words = set(text_clean.split())
